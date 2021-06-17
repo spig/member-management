@@ -1,0 +1,18 @@
+<p>
+  <b>Printed name:</b>
+  <%=h @member.printed_name %>
+</p>
+
+<p>
+  <b>Printed address:</b>
+  <%=h @member.printed_address %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @member.phone %>
+</p>
+
+
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back', members_path %>

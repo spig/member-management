@@ -1,0 +1,32 @@
+<h1>Editing member</h1>
+
+<%= error_messages_for :member %>
+
+<% form_for(:member, :url => member_path(@member), :html => { :method => :put }) do |f| %>
+  <p>
+    <b>Printed name</b><br />
+    <%= f.text_field :printed_name %>
+  </p>
+
+  <p>
+    <b>Full name</b><br />
+    <%= f.text_field :full_name %>
+  </p>
+
+  <p>
+    <b>Printed address</b><br />
+    <%= f.text_field :printed_address %>
+  </p>
+
+  <p>
+    <b>Phone</b><br />
+    <%= f.text_field :phone %>
+  </p>
+
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', member_path(@member) %> |
+<%= link_to 'Back', members_path %>
